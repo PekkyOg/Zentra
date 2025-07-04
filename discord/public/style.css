@@ -1,0 +1,112 @@
+body {
+  margin: 0;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  color: #f0f0f0;
+  font-family: 'Segoe UI', 'Roboto', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}
+
+.container {
+  background: rgba(30, 30, 30, 0.9);
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 0 20px rgba(114, 137, 218, 0.4);
+  max-width: 360px;
+  width: 90%;
+  text-align: center;
+  animation: fadeIn 0.5s ease-in-out;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.container:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 25px rgba(114, 137, 218, 0.6);
+  border: 2px solid rgba(114, 137, 218, 0.6);
+}
+
+.container h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #ffffff;
+  text-shadow: 0 0 8px rgba(114, 137, 218, 0.5);
+}
+
+.container img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+  border: 4px solid #7289da;
+  box-shadow: 0 0 12px rgba(114, 137, 218, 0.5);
+  transition: transform 0.3s ease;
+}
+
+.container img:hover {
+  transform: rotate(5deg) scale(1.05);
+}
+
+.container p {
+  font-size: 16px;
+  margin: 8px 0;
+  color: #dcdcdc;
+}
+
+.container strong {
+  color: #ffffff;
+}
+
+.container button {
+  background: linear-gradient(135deg, #7289da, #5865f2);
+  color: #fff;
+  border: none;
+  padding: 12px 24px;
+  font-size: 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: background 0.3s ease, transform 0.1s ease, box-shadow 0.3s ease;
+  box-shadow: 0 0 12px rgba(114, 137, 218, 0.4);
+}
+
+.container button:hover {
+  background: linear-gradient(135deg, #677bc4, #4752c4);
+  transform: translateY(-3px);
+  box-shadow: 0 0 18px rgba(114, 137, 218, 0.7);
+}
+
+.container button:active {
+  transform: translateY(0);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.zentra-header {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  font-size: 28px;
+  font-weight: bold;
+  color: #7289da;
+  text-shadow:
+    0 0 5px #7289da,
+    0 0 10px #7289da,
+    0 0 20px #7289da,
+    0 0 40px #5865f2;
+  animation: floatZentra 3s ease-in-out infinite;
+  z-index: 999;
+  user-select: none;
+  font-family: 'Segoe UI', 'Roboto', sans-serif;
+}
+
+@keyframes floatZentra {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
